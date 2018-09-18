@@ -63,3 +63,10 @@ Significa poder indicar las acciones a realizar sobre la lista de commit selecci
 El shell es el programa que realmente procesa los comandos y devuelve la salida.
 Un terminal se refiere a un programa de envoltura que ejecuta un shell.
 La consola es un tipo especial de terminal .
+
+
+### Docker
+
+#### Paso 3
+1. ¿Porqué es necesario crear un contenedor con esta bandera `-it` ? ¿Qué pasa si no le pongo `-it`?
+2. ¿Cuál es la diferencia entre `docker ps` y `docker ps -a`?
