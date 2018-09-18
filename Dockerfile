@@ -1,4 +1,4 @@
-FROM node:10.10.0-slim
+FROM nginx:alpine
 RUN mkdir /app
 COPY preguntas.md app/preguntas.md
 RUN ls /app
