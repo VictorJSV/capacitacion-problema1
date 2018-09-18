@@ -24,3 +24,13 @@ docker run -it --rm victorjsv/orbis-training-docker:0.2.0 sh
 ```bash
 docker run -it --rm -p 1080:80 victorjsv/orbis-training-docker:0.2.0
 ```
+
+#### Ejecutar con docker-compose
+```bash
+docker-compose up
+```
+
+#### Construir con docker-compose
+```bash
+docker-compose -f docker-compose.build.yml build server
+```
