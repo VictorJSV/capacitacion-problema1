@@ -14,3 +14,8 @@ docker push victorjsv/orbis-training-docker:0.1.0
 ```bash
 docker tag victorjsv/orbis-training-docker:0.1.0 victorjsv/orbis-training-docker:0.2.0
 ```
+
+#### Ejecutar el contenedor
+```bash
+docker run -it --rm victorjsv/orbis-training-docker:0.2.0 sh
+```
