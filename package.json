@@ -2,11 +2,12 @@
   "name": "orbis-training-project",
   "version": "1.0.0",
   "scripts": {
-    "start": "mdx-deck -p 3030 resources/preguntas.md",
+    "start": "markserv -i -p 3030 -a 0.0.0.0 resources/",
     "build": "mdx-deck build resources/preguntas.md"
   },
   "license": "ISC",
   "devDependencies": {
+    "markserv": "^1.13.1",
     "mdx-deck": "^1.7.4"
   }
 }
