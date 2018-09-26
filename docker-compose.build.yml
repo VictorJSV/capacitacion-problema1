@@ -1,6 +1,6 @@
 version: '2'
 services:
-  server:
-    image: victorjsv/orbis-training-docker:1.0.0
+  node:
+    image: victorjsv/orbis-training-docker:2.0.0
     build:
       context: ./
