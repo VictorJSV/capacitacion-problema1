@@ -32,7 +32,7 @@ docker-compose up
 
 #### Construir con docker-compose
 ```bash
-docker-compose -f docker-compose.build.yml build server
+docker-compose -f docker-compose.build.yml build node
 ```
 
 ## Con docker

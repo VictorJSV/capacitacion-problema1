@@ -1,16 +1,22 @@
+include Makefile-tasks.mk
 .PHONY: resources
 
+NAME_IMAGE   = victorjsv/orbis-training-docker
+DOCKER_TAG   = 2.0.0
+DOCKER_IMAGE = $(NAME_IMAGE):$(DOCKER_TAG)
+NAME         = victor
+
 install:
-	docker run -it --rm -w /app -v $(PWD)/:/app victorjsv/orbis-training-docker:2.0.0 npm install
+	docker run -it --rm -w /app -v $(PWD)/:/app $(DOCKER_IMAGE) npm install
 
 start:
-	docker run -it --rm -p 3030:3030 -p 35729:35729 -w /app -v $(PWD)/:/app victorjsv/orbis-training-docker:2.0.0 npm start
+	docker run -it --rm -p 3030:3030 -p 35729:35729 -w /app -v $(PWD)/:/app $(DOCKER_IMAGE) npm start
 
-build:
-	docker run -it --rm -w /app -v $(PWD)/:/app victorjsv/orbis-training-docker:2.0.0 npm run build
+realise:
+	docker run -it --rm -w /app -v $(PWD)/:/app $(DOCKER_IMAGE) npm run build
 
 greet:
-	docker run -it --rm -e NOMBRE=victor -w /app -v $(PWD)/:/app victorjsv/orbis-training-docker:2.0.0 bash resources/example.sh
+	docker run -it --rm -e NOMBRE=$(NAME) -w /app -v $(PWD)/:/app $(DOCKER_IMAGE) bash resources/example.sh
 
 resources:
 	echo 'Hola recursos!'
