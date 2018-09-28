@@ -12,7 +12,7 @@ pipeline {
                     image 'victorjsv/orbis-training-docker:2.0.0'
                     label 'Hola mundo'
                     args  '-it --rm -w /app -v $(pwd)/:/app'
-                    command 'npm install'
+                    // command 'npm install'
                 }
             } 
             steps {
