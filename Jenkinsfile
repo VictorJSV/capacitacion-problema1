@@ -10,7 +10,7 @@ pipeline {
             agent { 
                 docker {
                     image 'victorjsv/orbis-training-docker:2.0.0'
-                    label 'Hola mundo'
+                    label 'npm install'
                     args  '-it --rm -w /app -v $(pwd)/:/app'
                     // command 'npm install'
                 }
